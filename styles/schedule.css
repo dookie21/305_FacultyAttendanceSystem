@@ -1,0 +1,94 @@
+.schedule-container {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.schedule-header h2 {
+    font-size: 22px;
+    color: #1f2937;
+}
+
+.schedule-header .actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.schedule-filter {
+    display: flex;
+    overflow: hidden;
+    gap: 0;
+    display: none;
+}
+
+.schedule-filter .sched-btn {
+    background-color: #1f2937;
+    border-radius: 0;
+    margin: 0px 0.5px;
+
+}
+
+.schedule-filter .sched-btn:hover {
+    background-color: #4b5563;
+}
+
+.sched-btn.active {
+    background-color: #4b5563;
+}
+
+.schedule-header #addSchedule {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+}
+
+/* .schedule-header button:hover {
+    background: #1e40af;
+} */
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.schedule-table th[colspan="4"] {
+    background-color: #1f2937;
+    color: white;
+}
+
+.schedule-table th:nth-child(1),
+.schedule-table td:nth-child(1) {
+    width: 25%; /* Time column */
+}
+
+.schedule-table th:nth-child(2),
+.schedule-table td:nth-child(2) {
+    width: 55%; /* Faculty name */
+}
+
+.schedule-table th:nth-child(3),
+.schedule-table td:nth-child(3),
+.schedule-table th:nth-child(4),
+.schedule-table td:nth-child(4) {
+    width: 10%; /* Action buttons */
+}

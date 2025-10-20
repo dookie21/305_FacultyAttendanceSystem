@@ -1,0 +1,89 @@
+/* ===== Global ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #f5f6fa;
+    color: #333;
+}
+
+/* ===== Header ===== */
+.topbar {
+    width: 100%;
+    background: #1f2937;
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Layout ===== */
+.layout {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    width: 220px;
+    background: #2d3748;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: 0.2s;
+    font-weight: 500;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+    background: #4b5563;
+    color: #fff;
+}
+
+/* ===== Main Content ===== */
+.main-content {
+    flex: 1;
+    padding: 25px;
+    overflow-y: auto;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .sidebar nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+}

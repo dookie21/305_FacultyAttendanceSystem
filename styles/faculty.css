@@ -1,0 +1,58 @@
+.faculty-container {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.faculty-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.faculty-header h2 {
+    font-size: 22px;
+    color: #1f2937;
+}
+
+.faculty-header .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.faculty-header input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.faculty-header button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.faculty-header button:hover {
+    background: #1e40af;
+}
+
+.faculty-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.faculty-table th,
+.faculty-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.faculty-table th {
+    background-color: #1f2937 !important;
+    color: white !important;
+}
