@@ -1,4 +1,9 @@
 <?php
+session_start();
+if ($_SESSION['role'] !== 'admin') {
+    die("Access Denied");
+}
+
 include_once("../config.php");
 include_once("../firebaseRDB.php");
 
