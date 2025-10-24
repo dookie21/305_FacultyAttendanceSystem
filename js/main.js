@@ -31,7 +31,7 @@ links.forEach(link => {
         }
       })
       .catch(() => {
-        mainContent.innerHTML = "<p>Error loading page.</p>";
+        mainContent.innerHTML = "<p>LOADING, PLEASE WAIT.</p>";
       });
   });
 });

@@ -26,7 +26,7 @@ if (isset($_POST['update'])) {
     ]);
 
     if ($update) {
-        echo "<script>alert('Schedule updated successfully!'); window.location.href='../schedule_list.php';</script>";
+        echo "<script>alert('Schedule updated successfully!'); window.location.href='../index.php';</script>";
     } else {
         echo "<script>alert('Error updating schedule!'); window.history.back();</script>";
     }

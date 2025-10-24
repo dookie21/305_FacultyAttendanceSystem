@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('Asia/Manila');
+
 include("../config.php");
 include("../firebaseRDB.php");
 
@@ -6,7 +8,6 @@ $db = new firebaseRDB($databaseURL);
 
 $dateToday = strtoupper(date("l, F d, Y"));
 $today = strtoupper(date("l"));
-// $today = "THURSDAY";
 $currentDate = date("Y-m-d");
 
 // Retrieve schedules and attendance records
@@ -29,12 +30,17 @@ $attendance = json_decode($db->retrieve("attendance"), true);
             border-radius: 50%;
             display: inline-block;
         }
+
         .status-red {
-            background-color: #dc3545; /* Not yet checked */
+            background-color: #dc3545;
+            /* Not yet checked */
         }
+
         .status-blue {
-            background-color: #007bff; /* Checked */
+            background-color: #007bff;
+            /* Checked */
         }
+
         .btn-check {
             background-color: #007bff;
             color: white;
@@ -43,9 +49,11 @@ $attendance = json_decode($db->retrieve("attendance"), true);
             text-decoration: none;
             font-size: 14px;
         }
+
         .btn-check:hover {
             background-color: #0056b3;
         }
+
         .btn-disabled {
             background-color: #6c757d;
             color: white;
@@ -88,10 +96,13 @@ $attendance = json_decode($db->retrieve("attendance"), true);
                             $found = true;
 
                             // Check attendance status for this schedule
+                            // this feature is broken, ONLY WORKS WITH WEB VERSION
                             $isChecked = false;
                             if (is_array($attendance)) {
                                 foreach ($attendance as $a) {
                                     if (
+                                        is_array($a) &&
+                                        isset($a['schedule_id'], $a['date'], $a['status']) &&
                                         $a['schedule_id'] == $id &&
                                         $a['date'] == $currentDate &&
                                         strtolower($a['status']) == "checked"
@@ -130,4 +141,5 @@ $attendance = json_decode($db->retrieve("attendance"), true);
         </table>
     </div>
 </body>
+
 </html>
